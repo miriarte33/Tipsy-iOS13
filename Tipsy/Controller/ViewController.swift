@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     var buttons: Array<UIButton>? = nil
     
-    var tip: Float = 10.0
+    var tip: Float = 0.1
     var people: Int = 2
     var billTotal: Float? = nil
     
