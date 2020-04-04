@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tipButtonPressed(_ sender: UIButton) {
+        totalBillTextField.endEditing(true)
+        
         for button in buttons! {
             if button.currentTitle! == sender.currentTitle! {
                 button.isSelected = true;
@@ -42,11 +44,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func stepperPressed(_ sender: UIStepper) {
+        totalBillTextField.endEditing(true)
         people = Int(sender.value)
         peopleAmountLabel.text = String(people)
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        totalBillTextField.endEditing(true)
         billTotal = Float(totalBillTextField.text!) ?? 0.0
         
         splitCalculator.calculateSplit(billTotal ?? 0.0, tip, people)
